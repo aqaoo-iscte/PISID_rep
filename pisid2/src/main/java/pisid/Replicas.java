@@ -41,7 +41,7 @@ public class Replicas {
 	
 				Consumer<Document> printConsumer2 = new Consumer<Document>() {
 					public void accept(final Document doc2) {																	
-							if(doc1.equals(doc2)) { 
+							if(doc1.equals(doc2)) {  
 								count++;	
 							}
 
