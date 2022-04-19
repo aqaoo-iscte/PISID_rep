@@ -37,23 +37,19 @@ public class Replicas {
 		
 				
 		Consumer<Document> printConsumer = new Consumer<Document>() {
-			public void accept(final Document doc1) {				
-	
+			public void accept(final Document doc1) {					
 				Consumer<Document> printConsumer2 = new Consumer<Document>() {
 					public void accept(final Document doc2) {																	
 							if(doc1.equals(doc2)) {  
 								count++;	
 							}
-
 					}
 				};
 
 				items.forEach(printConsumer2);			
-				System.out.println( );
 				
 				if(count==0){
-					collection.insertOne(doc1);
-					
+					collection.insertOne(doc1);					
 				}
 				count = 0;
 				  
@@ -67,7 +63,7 @@ public class Replicas {
 
 	public static void main(String[] args) {
 		
-		while(true) {
+		while(true){
 			  
 			copiar();
 			try {
