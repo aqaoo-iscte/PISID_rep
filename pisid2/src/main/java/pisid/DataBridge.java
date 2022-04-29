@@ -17,7 +17,7 @@ public class DataBridge {
 		//CLoud
 		MongoClient mongoCloud = new MongoClient(new MongoClientURI("mongodb://194.210.86.10"));
 		MongoDatabase mongoDBCloud = mongoCloud.getDatabase("sid2022");
-		final MongoCollection<Document> collectionCloud = mongoDBCloud.getCollection("medicoes");
+		final MongoCollection<Document> collectionCloud = mongoDBCloud.getCollection("medicoes");		
 		final FindIterable<Document> itemsCloud = collectionCloud.find();
 		
 		//Local
@@ -38,7 +38,6 @@ public class DataBridge {
 	public static void main(String[] args) {
 		transfer();
 		
-
 	}
 
 }
