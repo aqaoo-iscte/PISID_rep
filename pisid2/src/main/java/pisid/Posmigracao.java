@@ -60,7 +60,8 @@ public class Posmigracao {
                 .send();
         
         client.toAsync().publishes(ALL, publish -> {
-           String arrived = (UTF_8.decode(publish.getPayload().get())).toString();  
+           String arrived = (UTF_8.decode(publish.getPayload().get())).toString();
+           System.out.println(arrived);
            String[] enviar = spliterdoquiterio(arrived);
            String query = "insert into medicao(Zona,Sensor,Hora,Leitura) values(?,?,?,?)";
            try {
