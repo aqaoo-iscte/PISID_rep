@@ -43,11 +43,11 @@ public class MigrationDireta {
 		
 				
 		Consumer<Document> printConsumer = new Consumer<Document>() {
-			public void accept(final Document doc1) {				
+			public void accept(final Document doc1){				
 	
 				Consumer<Document> printConsumer2 = new Consumer<Document>() {
 					public void accept(final Document doc2) {																	
-							if(doc1.equals(doc2)) { 
+							if(doc1.equals(doc2)){ 
 								String arrived = doc1.toString();								
 								String converted[] = spliterdoquiterio(arrived);
 								String query = "insert into medicao(Zona,Sensor,Hora,Leitura) values(?,?,?,?)";

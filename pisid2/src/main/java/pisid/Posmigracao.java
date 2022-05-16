@@ -25,7 +25,7 @@ public class Posmigracao {
 	
 	static void connect(){
 		try {
-			connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/culturas_local?user=root&password=abc");
+			connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/culturas_local?user=java&password=java");
 		} catch (SQLException e) {
 			
 			e.printStackTrace();

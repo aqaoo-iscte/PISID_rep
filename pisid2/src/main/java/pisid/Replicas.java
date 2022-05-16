@@ -14,6 +14,7 @@ import org.bson.types.ObjectId;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.Arrays;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import static com.mongodb.client.model.Filters.*;
@@ -62,12 +63,13 @@ public class Replicas {
 	}
 
 	public static void main(String[] args) {
+			
 		
 		while(true){
-			  
+			
 			copiar();
 			try {
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 
 				e.printStackTrace();
